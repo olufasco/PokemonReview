@@ -1,14 +1,14 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using PokemonReview.Data;
+using PokemonReview.Interfaces;
 using PokemonReview.Models;
 
 namespace PokemonReview.Repositories
 {
-    public class PokemonRepository
+    public class PokemonRepository : IPokemonRepository
     {
         private readonly DataContext _context;
-
-        public PokemonRepository(DataContext context) 
+        public PokemonRepository(DataContext context)
         {
             _context = context;
         }
